@@ -5,6 +5,8 @@ import javax.persistence.ForeignKey;
 import javax.persistence.Id;
 import javax.persistence.Index;
 
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+
 @Entity
 public class Book {
 
