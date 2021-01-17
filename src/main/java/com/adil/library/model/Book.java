@@ -91,4 +91,19 @@ public class Book {
         ", bfileName=" + bfileName + ", bid=" + bid + ", bname=" + bname + ", btype="
                 + btype + "]";
     }
+
+    /**
+     * @param bid
+     * @param bname
+     */
+    public Book(int bid, String bname) {
+        this.bid = bid;
+        this.bname = bname;
+    }
+
+    /**
+     * 
+     */
+    public Book() {
+    }
 }

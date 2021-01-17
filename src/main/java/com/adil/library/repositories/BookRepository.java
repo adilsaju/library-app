@@ -15,4 +15,5 @@ public interface BookRepository
     Book findById(int id); 
     List<Book> findAll(); 
     void deleteById(int id); 
+    Book save(Book book);
 } 
