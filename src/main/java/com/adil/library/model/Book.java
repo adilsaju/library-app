@@ -1,26 +1,37 @@
 package com.adil.library.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Index;
+import javax.persistence.ManyToOne;
+import javax.print.attribute.standard.DateTimeAtCompleted;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.lang.NonNull;
 
 @Entity
 public class Book {
 
     @Id @GeneratedValue
     private int bid;
+    @NonNull
     private String bname;
     //foreign key
     // private int authid;
-
-    // private Author author;
+    @ManyToOne()
+    private Author author;
     private String btype;
     //actually a blob
     private String bfileName;
+
+    private Date lastUserRentedDate;
+
+    @ManyToOne(targetEntity = User.class)
+    private User user_rented;
 
     /**
      * @return the bname
@@ -39,16 +50,16 @@ public class Book {
     /**
      * @return the author
      */
-    // public Author getAuthor() {
-    //     return author;
-    // }
+    public Author getAuthor() {
+        return author;
+    }
 
-    // /**
-    //  * @param author the author to set
-    //  */
-    // public void setAuthor(Author author) {
-    //     this.author = author;
-    // }
+    /**
+     * @param author the author to set
+     */
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
 
     /**
      * @return the btype
@@ -87,7 +98,7 @@ public class Book {
     @Override
     public String toString() {
         return "Book ["+
-        // "author=" + author + 
+        "author=" + author + 
         ", bfileName=" + bfileName + ", bid=" + bid + ", bname=" + bname + ", btype="
                 + btype + "]";
     }
