@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @SpringBootApplication
 @EntityScan(basePackages = {"com.adil.library"} )
-// @EnableJpaRepositories(basePackages = {"com.adil"} )
+@EnableJpaRepositories(basePackages = {"com.adil.library"} )
 @ComponentScan(basePackages = { "com.adil.library"} )
 public class LibraryAppApplication {
 
