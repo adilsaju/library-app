@@ -2,6 +2,7 @@ package com.adil.library.model;
 
 import javax.persistence.Entity;
 import javax.persistence.ForeignKey;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Index;
 
@@ -10,13 +11,13 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 @Entity
 public class Book {
 
-    @Id
+    @Id @GeneratedValue
     private int bid;
     private String bname;
     //foreign key
     // private int authid;
 
-    private Author author;
+    // private Author author;
     private String btype;
     //actually a blob
     private String bfileName;
@@ -38,16 +39,16 @@ public class Book {
     /**
      * @return the author
      */
-    public Author getAuthor() {
-        return author;
-    }
+    // public Author getAuthor() {
+    //     return author;
+    // }
 
-    /**
-     * @param author the author to set
-     */
-    public void setAuthor(Author author) {
-        this.author = author;
-    }
+    // /**
+    //  * @param author the author to set
+    //  */
+    // public void setAuthor(Author author) {
+    //     this.author = author;
+    // }
 
     /**
      * @return the btype
@@ -85,7 +86,9 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book [author=" + author + ", bfileName=" + bfileName + ", bid=" + bid + ", bname=" + bname + ", btype="
+        return "Book ["+
+        // "author=" + author + 
+        ", bfileName=" + bfileName + ", bid=" + bid + ", bname=" + bname + ", btype="
                 + btype + "]";
     }
 }

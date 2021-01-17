@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-// @ComponentScan
 @RestController
 public class ListBookController {
 
@@ -29,7 +28,7 @@ public class ListBookController {
 		Author a1 = new Author();
 		a1.setAname("Paulo Coelho");
 
-		book1.setAuthor(a1);
+		// book1.setAuthor(a1);
 		return book1.toString();
 	}
 }

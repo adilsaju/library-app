@@ -1,4 +1,6 @@
-INSERT INTO TBL_EMPLOYEES (first_name, last_name, email) VALUES
-  ('Lokesh', 'Gupta', 'abc@gmail.com'),
-  ('Deja', 'Vu', 'xyz@email.com'),
-  ('Caption', 'America', 'cap@marvel.com');
+INSERT INTO BOOK (bid, bfile_name, bname, btype) VALUES
+  (1,'abc.pdf', 'Alchemist', 'fantasy'),
+  (2,'Deja.doc', 'abc', 'fiction');
+INSERT INTO author (aid, aname, atype) VALUES
+  (1,'paulo', 'fantasy'),
+  (2,'dan brown', 'fiction');
