@@ -69,6 +69,7 @@ public class BookController {
 		Book book1 = new Book(Integer.parseInt(abc.get("bid").get(0)),abc.get("bname").get(0));
 		System.out.println("book1***************");
 		System.out.println(book1);
+		// TODO: get session ...
 		repo.save(book1);
 		return String.format("successfully added  %s",abc);
 	}
